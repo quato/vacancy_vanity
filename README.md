@@ -33,7 +33,7 @@ nginx -t
 открываем в браузере http://<ip_you_server>/
 
 Пример того, что Вы увидите у себя после установки:
-https://vacancy-vanilla.airdrop-hunter.site/
+https://vacancy-vanilla.airdrop-hunter.site/stats
 
 
 ## Тестовые задачи
