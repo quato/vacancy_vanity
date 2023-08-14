@@ -118,7 +118,7 @@ if(1)
     $page = preg_replace($preg,"\n\n",$page);
     $page = preg_replace($preg2,"\n",$page);
 
-    if(0)
+//    if(0)
     if($domen != "app-test.airdrop-hunter.site")
     {
     $page = str_replace("\n"," ",$page);

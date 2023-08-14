@@ -4,8 +4,10 @@
 - Vanilla JS (Способность писать код на простом JavaScript)
 - Vanity PHP (способность понимать нативный PHP)
 - Web3 (знать и понимать, что такое Abi). Понимать различие в Read, Write функциях смартконтракта.
-- Использовать обычные функции. Уыделять куски кода, которые имеют 2 и более повторений и разделять их на функции.
-- понимать зачем нужны RPC
+- Css3 (понимать чем отличается точка от хештега в стиле)
+- Bootstrap 4. (Знать что такое d-none, row, col-4 и тд)
+- Использовать обычные функции. Выделять куски кода, которые имеют 2 и более повторений и разделять их на функции.
+- понимать зачем нужны RPC. Что такое RPC.
 
 ## Установка проводилась на ubuntu с версией php 7.4
 
@@ -14,7 +16,9 @@ apt install nginx php-fpm
 ```
 
 You need modify file  /etc/php/7.4/fpm/pool.d/www.conf and change listen = /run/php/php7.4-fpm.sock to listen=127.0.0.1:9000
+```bash
 /etc/init.d/php7.4-fpm restart
+```
 
 ```bash
 mkdir -p /www/
@@ -32,7 +36,7 @@ nginx -t
 https://vacancy-vanilla.airdrop-hunter.site/
 
 
-## Задачи
+## Тестовые задачи
 - необходимо найти где и включить кнопку Deposit
 - необходимо найти где и показать выпадающий список сетей Ethereum, Bsc, Polygon
 - нужно создать новый пункт в центральном меню (там где Airdrops, Stats, Referrals) - пункт test
@@ -53,3 +57,10 @@ https://vacancy-vanilla.airdrop-hunter.site/
 
 ## Preview
 ![Preview](https://github.com/airdrop-hunter-site/vacancy_vanity/blob/main/vacancy_preview.png?raw=true)
+
+
+## Задачи по вакансии
+- усовершенстовать страницы сайты
+- импортировать новую верстку
+- изменять интерактивные страницы
+- подключать новые смартконтракты в процессинг через abi и ethereum.js(web3 libs)
