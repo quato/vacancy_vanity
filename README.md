@@ -18,7 +18,7 @@ Main urls:
 ## Установка проводилась на ubuntu 20 с версией php 7.4
 
 ```bash
-apt install nginx php-fpm
+apt install nginx php-fpm php-cli
 ```
 
 You need modify file  /etc/php/7.4/fpm/pool.d/www.conf and change listen = /run/php/php7.4-fpm.sock to listen=127.0.0.1:9000
