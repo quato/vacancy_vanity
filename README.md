@@ -1,5 +1,9 @@
 # vacancy_vanity
 
+Main urls:
+https://app.airdrop-hunter.site/
+https://airdrop-hunter.site/
+
 # Необходим специалисты с знанием 
 - Vanilla JS (Способность писать код на простом JavaScript)
 - Vanity PHP (способность понимать нативный PHP)
