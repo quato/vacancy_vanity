@@ -13,8 +13,9 @@ Main urls:
 - Использовать обычные функции. Выделять куски кода, которые имеют 2 и более повторений и разделять их на функции.
 - понимать зачем нужны RPC. Что такое RPC.
 - github: clone,commit,push,merge. branch, tag.
+- mysql (console, phpmyadmin)
 
-## Установка проводилась на ubuntu с версией php 7.4
+## Установка проводилась на ubuntu 20 с версией php 7.4
 
 ```bash
 apt install nginx php-fpm
