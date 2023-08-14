@@ -50,3 +50,6 @@ https://vacancy-vanilla.airdrop-hunter.site/
 - сделать PullRequest на github
 - дать ссыку на любой свой домен или поддомен с результатами выполенненых задач
 - или снять видео в формате mp4 длиной не более 2 минут
+
+## Preview
+![Preview](https://github.com/airdrop-hunter-site/vacancy_vanity/blob/main/vacancy_preview.png?raw=true)
