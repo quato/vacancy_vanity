@@ -39,12 +39,11 @@ $link[$i][url] = "/stats";
 $link[$i][name] = "Stats";
 $link[$i][item] = "stats";
 
-/*
+
 $i++;
-$link[$i][url] = "/airdrops";
-$link[$i][name] = "News";
-$link[$i][item] = "airdrops";
-*/
+$link[$i][url] = "/test";
+$link[$i][name] = "Test";
+$link[$i][item] = "test";
 
 
 

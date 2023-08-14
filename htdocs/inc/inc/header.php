@@ -25,14 +25,16 @@ print "
 
 					<div class=\"top-header__info  d-flex align-items-center\">
 ";
-if(1)
+/*
+if(0)
 print "
 <div class=\"deposit\">
         <button class=\"art-button-3 btn btn-primary btn-sm\" onclick=\"btn_buy_refill2();\">Deposit</button>
 </div>&nbsp;
 ";
+*/
 
-if(1)
+if(0)
 print "
 
 						<div class=\"networks\">
