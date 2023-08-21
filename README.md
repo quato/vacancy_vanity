@@ -29,7 +29,7 @@ You need modify file  /etc/php/7.4/fpm/pool.d/www.conf and change listen = /run/
 ```bash
 mkdir -p /www/
 cd /www
-git clone https://github.com/airdrop-hunter-bot/vacancy_vanity
+git clone https://github.com/airdrop-hunter-site/vacancy_vanity
 cd vacancy_vanity
 cp nginx/11_vacancy_vanilla.conf /etc/nginx/sites-available
 nginx -t
