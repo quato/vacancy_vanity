@@ -89,17 +89,17 @@ print "
 print "
 						
 						<div class=\"top-header__wallet\">
-							<div class=\"d-none auth_off\">
+							<div class=\"auth_off\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\"><span class=\"access_balance\">-</span>$</div>
+								<div class=\"top-header__wallet-m\"><span class=\"access_balance\">2543</span>$</div>
 								<a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
-									<span class=\"wallet-id\">...</span>
+									<span class=\"wallet-id\">0xb512...8C0B</span>
 									<span class=\"status\"></span>
 								</a>
                                                         </div>
 							</div>
 
-                                                        <div class=\"auth_on\">
+                                                        <div class=\"d-none auth_on\">
                                                             <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" onclick=\"return false;\">Connect Wallet</a>
                                                         </div>
 
