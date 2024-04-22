@@ -17,15 +17,20 @@ window.onload = function() {
   let netParentLinks = document.querySelectorAll('.networks-link');
   let netLinks = document.querySelectorAll('.networks-link .networks__link');
   for (let i=0; i<netLinks.length;i++) {
-    netLinks[i].onclick = function() {
+    netLinks[i].onclick = async function() {
       let active = document.querySelector('.networks__active');
-      active.classList.remove('notavailable');
-      clearActive(netParentLinks);
-      let activeHTML = this.innerHTML;
-      let btn = document.querySelector('.networks__btn');
-      btn.innerHTML = activeHTML;
-      let parentEl = this.closest('.networks-link');
-      parentEl.classList.add('active');
+      let chainId = netLinks[i].dataset.chainId;
+      console.log(chainId);
+      let networkChanged = await changeNetwork(chainId);
+      if(networkChanged === true) {
+        active.classList.remove('notavailable');
+        clearActive(netParentLinks);
+        let activeHTML = this.innerHTML;
+        let btn = document.querySelector('.networks__btn');
+        btn.innerHTML = activeHTML;
+        let parentEl = this.closest('.networks-link');
+        parentEl.classList.add('active');
+      }
       return false;
     };
   }

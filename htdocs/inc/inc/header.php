@@ -25,16 +25,13 @@ print "
 
 					<div class=\"top-header__info  d-flex align-items-center\">
 ";
-/*
-if(0)
+
 print "
 <div class=\"deposit\">
         <button class=\"art-button-3 btn btn-primary btn-sm\" onclick=\"btn_buy_refill2();\">Deposit</button>
 </div>&nbsp;
 ";
-*/
 
-if(0)
 print "
 
 						<div class=\"networks\">
@@ -52,7 +49,7 @@ print "
 							<div class=\"networks__links dropdown-menu\" aria-labelledby=\"dropdownNetwork\">
 								<div class=\"name\">Select a network</div>
 								<div class=\"networks-link\">
-									<a href=\"#\" class=\"networks__link\">
+									<a href=\"#\" class=\"networks__link\" data-chain-id=\"0x1\">
 										<img src=\"/images/ethereum.svg\" alt=\"\" />
 										<span>Ethereum</span>
 									</a>
@@ -62,7 +59,7 @@ print "
 									</a>
 								</div>
 								<div class=\"networks-link\">
-									<a href=\"#\" class=\"networks__link\">
+									<a href=\"#\" class=\"networks__link\" data-chain-id=\"0x38\">
 										<img src=\"/images/bsc.svg\" alt=\"\" />
 										<span>BSC</span>
 									</a>
@@ -72,7 +69,7 @@ print "
 									</a>
 								</div>
 								<div class=\"networks-link active\">
-									<a href=\"#\" class=\"networks__link\">
+									<a href=\"#\" class=\"networks__link\" data-chain-id=\"0x89\">
 										<img src=\"/images/poligon.svg\" alt=\"\" />
 										<span>Polygon</span>
 									</a>
@@ -89,20 +86,18 @@ print "
 print "
 						
 						<div class=\"top-header__wallet\">
-							<div class=\"auth_off\">
+							<div class=\"d-none auth_off\">
 							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\"><span class=\"access_balance\">2543</span>$</div>
-								<a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
-									<span class=\"wallet-id\">0xb512...8C0B</span>
-									<span class=\"status\"></span>
-								</a>
-                                                        </div>
+								<div class=\"top-header__wallet-m\"><span class=\"access_balance\">0.0000</span><span id=\"currency_network\" title=\"\">ETH</span></div>
+                                    <a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
+                                        <span class=\"wallet-id\">...</span>
+                                        <span class=\"status\"></span>
+                                    </a>
+                                </div>
 							</div>
-
-                                                        <div class=\"d-none auth_on\">
-                                                            <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" onclick=\"return false;\">Connect Wallet</a>
-                                                        </div>
-
+                            <div class=\"auth_on\">
+                                <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" id=\"connectButton\">Connect Wallet</a>
+                            </div>
 						</div>
 
 ";
