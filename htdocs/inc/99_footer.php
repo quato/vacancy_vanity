@@ -94,23 +94,30 @@ print "<script src=/js2/".($js_debug?"?".time():"")."></script>";
           await connectWallet();
       });
 
+      document.getElementById('disconnectButton').addEventListener('click', async () => {
+          disconnectWallet();
+      });
+
       const connectWallet = async () => {
         if (window.ethereum) {
             await window.ethereum.request({method: 'eth_requestAccounts'});
             await updateWalletData();
-
-            // toggle visibility of connection block
-            let authOff = document.querySelectorAll('.auth_off');
-            if (authOff.length) {
-                for (let item of authOff)  item.classList.toggle('d-none')
-            }
-
-            // toggle visibility of connected wallet block
-            let authOn = document.querySelectorAll('.auth_on');
-            if (authOn.length) {
-                for (let item of authOn) item.classList.toggle('d-none')
-            }
+            toggleConnectButtons();
         }
+      };
+
+      const toggleConnectButtons = () => {
+          // toggle visibility of connection block
+          let authOff = document.querySelectorAll('.auth_off');
+          if (authOff.length) {
+              for (let item of authOff) item.classList.toggle('d-none')
+          }
+
+          // toggle visibility of connected wallet block
+          let authOn = document.querySelectorAll('.auth_on');
+          if (authOn.length) {
+              for (let item of authOn) item.classList.toggle('d-none')
+          }
       };
 
       const activateSelectedNetwork = (chainId) => {
@@ -135,7 +142,8 @@ print "<script src=/js2/".($js_debug?"?".time():"")."></script>";
       const checkConnection = async () =>  {
           if (window.ethereum) {
               let accounts = await window.ethereum.request({ method: 'eth_accounts' });
-              if (accounts.length == 0) return;
+
+              if (accounts.length == 0 || !(get_cookie('connectedWallet')) || get_cookie('connectedWallet') == '') return;
               await connectWallet();
         } else {
           // Alert the user to download Metamask
@@ -150,6 +158,7 @@ print "<script src=/js2/".($js_debug?"?".time():"")."></script>";
               let chainId = await window.ethereum.request({method: 'eth_chainId'});
               let currentCurrency = changeCurrency(chainId);
                 activateSelectedNetwork(chainId);
+                set_cookie('connectedWallet', accounts[0]);
               const web3 = new Web3(window.ethereum);
               await web3.eth.getBalance(accounts[0]).then(balance => {
                   let etherBalance = web3.utils.fromWei(balance);
@@ -212,6 +221,12 @@ print "<script src=/js2/".($js_debug?"?".time():"")."></script>";
             let currencyWrapper = document.getElementById('currency_network');
             currencyWrapper.innerHTML = ` ${currencySymbol}`;
             return currencySymbol;
+        };
+
+        const disconnectWallet = () => {
+            set_cookie('connectedWallet', '');
+            toggleConnectButtons();
+            return true;
         };
 
     </script>

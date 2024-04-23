@@ -87,17 +87,20 @@ print "
 						
 						<div class=\"top-header__wallet\">
 							<div class=\"d-none auth_off\">
-							<div class=\"top-header__wallet-bl\">
-								<div class=\"top-header__wallet-m\"><span class=\"access_balance\">0.0000</span><span id=\"currency_network\" title=\"\">ETH</span></div>
+                                <div class=\"top-header__wallet-bl\">
+                                    <div class=\"top-header__wallet-m\"><span class=\"access_balance\">0.0000</span><span id=\"currency_network\" title=\"\">ETH</span></div>
                                     <a href=\"#\" data-fancybox class=\"top-header__wallet-id\" data-bs-toggle=\"modal\" data-bs-target=\"#accountModal\">
-                                        <span class=\"wallet-id\">...</span>
-                                        <span class=\"status\"></span>
+                                            <span class=\"wallet-id\">...</span>
+                                            <span class=\"status\"></span>
                                     </a>
                                 </div>
 							</div>
                             <div class=\"auth_on\">
                                 <a href=\"#\" class=\"top-header__wallet-link wallet_connect\" id=\"connectButton\">Connect Wallet</a>
                             </div>
+						</div>
+						<div class=\"top-header__wallet auth_on d-none\">
+						    <a href=\"#\" class=\"top-header__wallet-link wallet_disconnect\" id=\"disconnectButton\">Disconnect</a>
 						</div>
 
 ";
